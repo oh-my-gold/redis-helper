@@ -3,6 +3,9 @@
     "description": "redis helper",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
     "autoload": {
         "psr-4": {
             "OhMyGold\\RedisHelper\\": "src/"
@@ -14,6 +17,5 @@
             "email": "zhang@uukule.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "stable"
 }

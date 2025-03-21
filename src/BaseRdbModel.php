@@ -11,7 +11,7 @@ abstract class BaseRdbModel
      * 连接配置
      * @var string|array
      */
-    protected $connect = 'queue';
+    protected $connect = '';
 
     /**
      * ID
@@ -25,14 +25,14 @@ abstract class BaseRdbModel
      *
      * @var string
      */
-    protected $keyNamePre;
+    protected string $keyNamePre;
 
     /**
      * Redis对象key值
      *
      * @var string
      */
-    protected $keyName;
+    protected string $keyName;
 
     /**
      * @var
@@ -42,7 +42,7 @@ abstract class BaseRdbModel
     /**
      * 2~3天
      *
-     * @var float[]|int[]
+     * @var float[]|int[]|int
      */
     protected $expireRange = [86400 * 2, 86400 * 3];
 
