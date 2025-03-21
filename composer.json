@@ -1,0 +1,19 @@
+{
+    "name": "oh-my-gold/redis-helper",
+    "description": "redis helper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "OhMyGold\\RedisHelper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mr.zhang",
+            "email": "zhang@uukule.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
