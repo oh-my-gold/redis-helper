@@ -21,11 +21,11 @@ abstract class BaseRdbModel
     protected $id;
 
     /**
-     * 对象Key前缀
+     * 对象Key模板
      *
      * @var string
      */
-    protected $keyNamePre;
+    protected $keyNameTemplate = '';
 
     /**
      * Redis对象key值
@@ -49,10 +49,9 @@ abstract class BaseRdbModel
     /**
      * @param mixed $id
      */
-    public function __construct($id = '')
+    public function __construct(...$arg)
     {
-        $this->id = $id;
-        $this->keyName = $this->keyNamePre . $id;
+        $this->keyName = sprintf($this->keyNameTemplate, ...$arg);
     }
 
     /**
@@ -88,13 +87,6 @@ abstract class BaseRdbModel
         return $this->keyName;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * @return bool
